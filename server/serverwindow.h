@@ -2,6 +2,7 @@
 #define SERVERWINDOW_H
 
 #include <QMainWindow>
+#include "server.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class ServerWindow; }
@@ -15,6 +16,7 @@ public:
     ServerWindow(QWidget *parent = nullptr);
     ~ServerWindow();
 
+    server myServer;
 private:
     Ui::ServerWindow *ui;
 };

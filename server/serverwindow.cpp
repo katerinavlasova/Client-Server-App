@@ -6,6 +6,8 @@ ServerWindow::ServerWindow(QWidget *parent)
     , ui(new Ui::ServerWindow)
 {
     ui->setupUi(this);
+
+    myServer.startServer();
 }
 
 ServerWindow::~ServerWindow()
