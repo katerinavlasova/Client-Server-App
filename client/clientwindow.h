@@ -22,6 +22,9 @@ public:
 public slots:
     void socketReady();
     void socketDisc();
+private slots:
+    void on_chooseFileButton_clicked();
+
 private:
     Ui::ClientWindow *ui;
 };
