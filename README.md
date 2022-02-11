@@ -13,14 +13,25 @@ The server listens to a localhost. After a connection is established and the pic
 This picture is shown in the label. The picture is resized to fit the label.
 
 ## Example
-Here are examples of how the program works
+Here are examples of how the program works.
+
+Start of the program
 
 <img src="https://github.com/katerinavlasova/Client-Server-App/blob/master/media/start_program.png" width="550" height= "250">
+
+
 Click button "Choose a file"
+
 <img src="https://github.com/katerinavlasova/Client-Server-App/blob/master/media/choose_first_file.png" width="550" height= "250">
+
+
 After the file is chosen
-<img src="https://github.com/katerinavlasova/Client-Server-App/blob/master/media/show_first_file.png" width="550" height= "250">
+
+<img src="https://github.com/katerinavlasova/Client-Server-App/blob/media/media/after_file_is_chosen.png" width="550" height= "250">
+
+
 After another file is chosen
+
 <img src="https://github.com/katerinavlasova/Client-Server-App/blob/master/media/show_second_file.png" width="550" height= "250">
 
 
