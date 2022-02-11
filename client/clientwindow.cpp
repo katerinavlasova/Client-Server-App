@@ -41,6 +41,8 @@ void ClientWindow::on_chooseFileButton_clicked()
     socket->connectToHost(QHostAddress::LocalHost, 1010);
     Data = file.readAll();
     socket->write(Data);
-    socket->waitForBytesWritten(900);
+    socket->waitForBytesWritten(300);
+    qDebug() << "i send you " << Data.size();
+
 }
 

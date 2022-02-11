@@ -31,11 +31,17 @@ void server::incomingConnection(qintptr socketDescriptor)
 
 void server::socketReady()
 {
-    if (socket->bytesAvailable() > 0)
+    Data.clear();
+    while (socket->bytesAvailable() > 0)
     {
-        Data = socket->readAll();
+        Data.append(socket->readAll());
+        socket->flush();
+        socket->waitForReadyRead(200);
     }
-    emit showSignal(Data);
+    if (Data.size() > 0)
+    {
+        emit showSignal(Data);
+    }
 }
 
 void server::socketDisc()
