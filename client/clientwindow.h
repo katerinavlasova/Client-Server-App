@@ -23,6 +23,7 @@ public slots:
     void socketReady();
     void socketDisc();
 private slots:
+    //send a chosen file to the server
     void on_chooseFileButton_clicked();
 
 private:
