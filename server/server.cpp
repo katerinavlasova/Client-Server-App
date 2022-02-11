@@ -1,5 +1,5 @@
 #include "server.h"
-
+#include "serverwindow.h"
 server::server() {}
 
 server::~server() {}
@@ -35,6 +35,7 @@ void server::socketReady()
     {
         Data = socket->readAll();
     }
+    emit showSignal(Data);
 }
 
 void server::socketDisc()

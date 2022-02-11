@@ -8,6 +8,7 @@ ServerWindow::ServerWindow(QWidget *parent)
     ui->setupUi(this);
 
     myServer.startServer();
+    connect(&myServer, SIGNAL(showSignal(QByteArray&)), this, SLOT(showPicture(QByteArray&)));
 }
 
 ServerWindow::~ServerWindow()
@@ -15,3 +16,8 @@ ServerWindow::~ServerWindow()
     delete ui;
 }
 
+
+void ServerWindow::showPicture(QByteArray &bytePicture)
+{
+    qDebug("show picture!! \n");
+}

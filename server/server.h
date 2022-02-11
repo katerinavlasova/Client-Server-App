@@ -19,6 +19,9 @@ public slots:
     void incomingConnection(qintptr socketDescriptor);
     void socketReady();
     void socketDisc();
+
+signals:
+    void showSignal(QByteArray &bytePicture);
 };
 
 #endif // SERVER_H

@@ -17,7 +17,12 @@ public:
     ~ServerWindow();
 
     server myServer;
+
+public slots:
+    void showPicture(QByteArray &bytePicture);
+
 private:
     Ui::ServerWindow *ui;
+
 };
 #endif // SERVERWINDOW_H
