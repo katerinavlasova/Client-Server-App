@@ -21,6 +21,7 @@ public slots:
     void socketDisc();
 
 signals:
+    //signal to show picture
     void showSignal(QByteArray &bytePicture);
 };
 

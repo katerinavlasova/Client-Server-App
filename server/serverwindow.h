@@ -19,6 +19,7 @@ public:
     server myServer;
 
 public slots:
+    //show picture that server received
     void showPicture(QByteArray &bytePicture);
 
 private:

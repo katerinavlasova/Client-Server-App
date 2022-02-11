@@ -9,6 +9,7 @@ ServerWindow::ServerWindow(QWidget *parent)
     ui->setupUi(this);
 
     myServer.startServer();
+    // server sends a signal after receiving a picture, showPicture shows received picture
     connect(&myServer, SIGNAL(showSignal(QByteArray&)), this, SLOT(showPicture(QByteArray&)));
 }
 

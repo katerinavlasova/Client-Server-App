@@ -31,13 +31,18 @@ void server::incomingConnection(qintptr socketDescriptor)
 
 void server::socketReady()
 {
+    //clear previous data
     Data.clear();
+
+    //read data from client
     while (socket->bytesAvailable() > 0)
     {
         Data.append(socket->readAll());
         socket->flush();
         socket->waitForReadyRead(200);
     }
+
+    //send signal to GUI to show picture
     if (Data.size() > 0)
     {
         emit showSignal(Data);
