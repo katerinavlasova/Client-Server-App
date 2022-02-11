@@ -23,8 +23,8 @@ void server::incomingConnection(qintptr socketDescriptor)
     socket = new QTcpSocket(this);
     socket->setSocketDescriptor(socketDescriptor);
 
-    connect(socket, SIGNAL(readyRead()), this, SIGNAL(socketReady()));
-    connect(socket, SIGNAL(disconnected()), this, SLOT(socketDisconnection()));
+    connect(socket, SIGNAL(readyRead()),this, SLOT(socketReady()));
+    connect(socket, SIGNAL(disconnected()), this, SLOT(socketDisc()));
     qDebug() << "Client connected";
 
 }
@@ -37,7 +37,7 @@ void server::socketReady()
     }
 }
 
-void server::socketDisconnection()
+void server::socketDisc()
 {
     socket->deleteLater();
 }

@@ -3,9 +3,11 @@
 
 #include <QTcpServer>
 #include <QTcpSocket>
+#include <QObject>
 
 class server : public QTcpServer
 {
+    Q_OBJECT
 public:
     server();
     ~server();
@@ -16,7 +18,7 @@ public slots:
     int startServer();
     void incomingConnection(qintptr socketDescriptor);
     void socketReady();
-    void socketDisconnection();
+    void socketDisc();
 };
 
 #endif // SERVER_H
