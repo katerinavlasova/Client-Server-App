@@ -35,11 +35,14 @@ void server::socketReady()
     Data.clear();
 
     //read data from client
-    while (socket->bytesAvailable() > 0)
+    while (socket->waitForReadyRead(200))
     {
-        Data.append(socket->readAll());
-        socket->flush();
-        socket->waitForReadyRead(200);
+        while (socket->bytesAvailable() > 0)
+        {
+            Data.append(socket->readAll());
+            socket->flush();
+            socket->waitForReadyRead(200);
+        }
     }
 
     //send signal to GUI to show picture
