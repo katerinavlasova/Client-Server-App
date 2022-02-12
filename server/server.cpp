@@ -41,7 +41,6 @@ void server::socketReady()
         {
             Data.append(socket->readAll());
             socket->flush();
-            socket->waitForReadyRead(200);
         }
     }
 

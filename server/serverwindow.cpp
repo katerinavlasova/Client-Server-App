@@ -23,7 +23,7 @@ void ServerWindow::showPicture(QByteArray &bytePicture)
 {
     QPixmap pic;
     pic.loadFromData(bytePicture, "PNG");
-    int w = ui->PictureLabel->width ();
-    int h = ui->PictureLabel->height ();
+    int w = ui->PictureLabel->width();
+    int h = ui->PictureLabel->height();
     ui->PictureLabel->setPixmap(pic.scaled(w,h, Qt::KeepAspectRatio));
 }
