@@ -8,11 +8,12 @@
 class server : public QTcpServer
 {
     Q_OBJECT
+private:
+    QTcpSocket *socket;
+    QByteArray Data;
 public:
     server();
     ~server();
-    QTcpSocket *socket;
-    QByteArray Data;
 
 public slots:
     int startServer();

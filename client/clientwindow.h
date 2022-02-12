@@ -11,13 +11,14 @@ QT_END_NAMESPACE
 class ClientWindow : public QMainWindow
 {
     Q_OBJECT
+private:
+    QTcpSocket *socket;
+    QByteArray Data;
 
 public:
     ClientWindow(QWidget *parent = nullptr);
     ~ClientWindow();
 
-    QTcpSocket *socket;
-    QByteArray Data;
 
 public slots:
     void socketReady();
