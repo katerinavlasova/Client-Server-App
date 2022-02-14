@@ -5,8 +5,9 @@ This is a client-server app. The server is waiting for a connection and an incom
 The client can send one picture after another and the server will show them successively.
 
 ## About the project
+TCP was used.
 ### Client side
-The client has a GUI with a button for the user to choose a picture. After the picture is chosen, the client converts the picture to the QBytesArray, connects to the server and sends the converted file to the server.
+The client has a GUI with a button for the user to choose a picture. After the picture is chosen, the client converts the picture to the QBytesArray, connects to the server and sends the converted file to the server. 
 
 ### Server side
 The server listens to a localhost. After a connection is established and the picture is received, the server sends a signal and picture, converted to QBytesArray, to the GUI to show this picture. 
