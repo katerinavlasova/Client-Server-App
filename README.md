@@ -15,6 +15,12 @@ This picture is shown in the label. The picture is resized to fit the label.
 ## Example
 Here are examples of how the program works.
 
+Gif example:
+<img src="https://github.com/katerinavlasova/sss/blob/main/gif_example.gif">
+
+
+Screenshots
+
 Start of the program
 
 <img src="https://github.com/katerinavlasova/Client-Server-App/blob/master/media/start_program.png" width="550" height= "250">
