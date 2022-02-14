@@ -16,7 +16,7 @@ This picture is shown in the label. The picture is resized to fit the label.
 Here are examples of how the program works.
 
 Gif example:
-<img src="https://github.com/katerinavlasova/sss/blob/main/gif_example.gif">
+<img src="https://github.com/katerinavlasova/Client-Server-App/blob/media/gif_example.gif">
 
 
 Screenshots
